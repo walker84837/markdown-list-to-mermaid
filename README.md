@@ -1,16 +1,16 @@
 # Markdown list to Mermaid
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Java Version](https://img.shields.io/badge/Java-21-green.svg)]
+![Java Version](https://img.shields.io/badge/Java-21-green.svg)
 
-`md2mermaid` is a small command-line utility that converts a Markdown list file into a [Mermaid](https://mermaid.js.org/) "graph TD" diagram syntax. It can optionally wrap the output in Markdown code‐fences for direct inclusion in `.md` documents.
+`md2mermaid` is a small command-line utility that converts a Markdown list file into a [Mermaid](https://mermaid.js.org/) `graph TD` diagram syntax. It can optionally wrap the output in Markdown code‐fences for direct inclusion in `.md` documents.
 
 ## Features
 
 - Parses nested Markdown bullet lists (`-` or `*`) of arbitrary depth  
 - Assigns stable node IDs based on nesting and order  
-- Emits Mermaid “graph TD” syntax with nodes and arrows  
-- Optional Markdown code-fence headers (` ```mermaid ` … ``` )  
+- Emits Mermaid `graph TD` syntax with nodes and arrows  
+- Optional Markdown code-fence headers
 
 ## Requirements
 
@@ -22,7 +22,7 @@
 
 ```bash
 git clone https://github.com/hhoao/markdown-list-to-mermaid.git
-cd md2mermaid
+cd markdown-list-to-mermaid
 ```
 
 ### 2. Build
