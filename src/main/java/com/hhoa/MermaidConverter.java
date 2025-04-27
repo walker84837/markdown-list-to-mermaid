@@ -50,7 +50,7 @@ public class MermaidConverter {
             depthMap.put(sorted.get(i), i);
         }
 
-        // 3) now do the real parse
+        // now do the real parse
         var nodeStack = new ArrayDeque<Node>();
         for (String line : lines) {
             var m = bullet.matcher(line);
