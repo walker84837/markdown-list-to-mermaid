@@ -44,8 +44,8 @@ public class MermaidConverter {
             }
         }
         // build length -> depth map
-        var sorted = new ArrayList<>(indentSet);  // e.g. [0,2,4]
-        var depthMap = new HashMap<Integer,Integer>();
+        var sorted = new ArrayList<>(indentSet); // e.g. [0,2,4]
+        var depthMap = new HashMap<Integer, Integer>();
         for (int i = 0; i < sorted.size(); i++) {
             depthMap.put(sorted.get(i), i);
         }
@@ -56,11 +56,12 @@ public class MermaidConverter {
             var m = bullet.matcher(line);
             if (!m.find()) continue;
 
-            String indent  = m.group(1);
-            String content = m.group(0)
-                .replaceFirst("^(\\s*[-*]\\s+)", "")
-                .replaceAll("\\(([^)]+)\\):", " - $1")
-                .trim();
+            String indent = m.group(1);
+            String content =
+                    m.group(0)
+                            .replaceFirst("^(\\s*[-*]\\s+)", "")
+                            .replaceAll("\\(([^)]+)\\):", " - $1")
+                            .trim();
 
             int depth = depthMap.get(indent.length());
             var node = new Node(depth);
@@ -122,11 +123,9 @@ public class MermaidConverter {
 
     private void appendGraphHeader(StringBuilder mermaid) {
         if (this.addHeaders) {
-            mermaid
-                    .append("```mermaid\n");
+            mermaid.append("```mermaid\n");
         }
-        mermaid
-                .append("graph TD\n");
+        mermaid.append("graph TD\n");
     }
 
     private void appendGraphEnd(StringBuilder mermaid) {
