@@ -15,6 +15,7 @@
 ## Requirements
 
 - **Java 21** or higher
+- *Optional*: [`@mermaid-js/mermaid-cli`](https://www.npmjs.com/package/@mermaid-js/mermaid-cli) for validating the Mermaid output.
 
 ## Getting Started
 
